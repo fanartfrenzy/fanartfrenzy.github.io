@@ -1,0 +1,113 @@
+body {
+	margin: 0;
+	padding: 1rem;
+	min-height: 100vh;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, min(400px, 100%));
+	gap: 1rem;
+	align-items: center;
+	justify-content: center;
+	background: linear-gradient(45deg, red, blue);
+	background-attachment: fixed;
+}
+
+.paper {
+  width: 80vw;
+  height: 200px;
+  margin: 2em auto;
+  background: #fff !important;
+  box-shadow: 4px 4px 0 #00486B;
+  background-image:
+    linear-gradient(
+      90deg,
+      #fff 12px, 0,
+      #00486B 15px, 0,
+      #1373A9 20px, 0,
+      #fff 100%
+    ),
+    radial-gradient(
+      circle closest-side,
+      rgba(255,255,255,0) 88%,
+      #fff 100%
+    ),
+    radial-gradient(
+      circle at 22px 8px,
+      #1373A9 40%,
+      #00486B 40%,
+      #00486B 100%
+    );
+  background-size: 32px 8px, 32px 16px, 32px 16px;
+  background-repeat: space no-repeat;
+  background-position: center top, center 6px, center 6px;
+  
+  &--alt {
+    background-image: linear-gradient(90deg, #fff 12px, 0, #00486B 15px, 0 ,#1373A9 20px, 0,#fff 100%),radial-gradient(circle closest-side,rgba(255,255,255,0) 88%,#fff 100%),radial-gradient(circle at 22px 8px,#1373A9 40%,#00486B 40%,#00486B 100%);
+    background-image: url("data:image/svg+xml,%3Csvg fill='none' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 21'%3E%3Cpath d='M20 0h-7v6.9a7.5 7.5 0 107 0V0z' fill='%231373A9'/%3E%3Cpath d='M13 0h3v6.9a7.5 7.5 0 002 14 7.5 7.5 0 01-9-7.4c0-2.9 1.6-5.4 4-6.6V0z' fill='%2300486B'/%3E%3C/svg%3E");
+    background-size: 2em 1.3125em;
+  }
+}
+
+
+* {
+	box-sizing: border-box;
+}
+
+
+
+.halftone {
+	--mask: linear-gradient(rgb(0 0 0), rgb(0 0 0 / 0.5));
+	--stop1: 0.06rem;
+	--stop2: 0.65rem;
+	--invert: 0;
+	--dotColor: black;
+	--bgColor: white;
+	--dottedBackground: radial-gradient(circle at center, var(--dotColor) var(--stop1), transparent var(--stop2));
+	
+	aspect-ratio: 1;
+	position: relative;
+	background: var(--bgColor);
+	filter: contrast(50) invert(var(--invert, 0));
+	mix-blend-mode: multiply;
+	isolation: isolate;
+	border: 4px solid var(--borderColor, var(--dotColor));
+    width: 100%;
+    height: 100%;
+}
+
+.halftone::after {
+	content: '';
+	position: absolute;
+	inset: 0;
+	background-image: var(--dottedBackground);
+	background-size: var(--bgSize, 1rem) var(--bgSize, 1rem);
+	background-repeat: round;
+	background-position: 0 0, var(--bgPosition) var(--bgPosition);
+	mask-image: var(--mask);
+}
+
+.halftone:nth-child(even) {
+	--bgSize: 1.4rem;
+	--bgPosition: calc(var(--bgSize) / 2);
+	--dottedBackground: radial-gradient(circle at center, var(--dotColor) var(--stop1), transparent var(--stop2)), radial-gradient(circle at center, var(--dotColor) var(--stop1), transparent var(--stop2));
+}
+
+.halftone:nth-child(3),
+.halftone:nth-child(4) {
+	--borderColor: white;
+	--invert: 1;
+}
+
+.halftone:nth-child(5),
+.halftone:nth-child(6) {
+	--invert: 1;
+	mix-blend-mode: screen;
+}
+
+.halftone:nth-child(7),
+.halftone:nth-child(8) {
+	--borderColor: white;
+	mix-blend-mode: screen;
+}
+
+
+

@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@200;400;500;600;800&display=swap');
+
+$main_color : white; 
+$secondary_color: purple;
+$textbox_color: white; 
+$text_color: black; 
+
+html {
+    background-color: $main_color;
+    font-family: 'Bitter', serif;
+    color: $secondary_color;
+}
+
+.textdiv {
+    background-color:  $textbox_color;
+    margin: 0 auto; 
+    padding: 8px;
+    margin-bottom: 64px;
+}
+
+.intro {
+    padding-top: 8px !important; 
+    font-weight: 500;
+    font-size: 0.95em;
+    text-align: center;
+}
+p {
+    font-size: 0.85em; 
+    color:$text_color;
+    color: $secondary_color;
+}
+
+a {
+    font-size: 0.85em; 
+    color:$text_color;
+    color: $secondary_color;
+}
+
+h2 {
+    font-weight: 800;
+    color: $secondary_color;
+    text-align: center; 
+}
+
+h3 {
+    font-weight: 600; 
+    color: $secondary_color;
+    font-size: 1.1em; 
+}
+
+.foto {
+    text-align: center; 
+    padding-top: 16px; 
+}
+.page-footer {
+    background-color: $secondary_color;
+}
+
+.collection-item {
+    color: $secondary_color !important;
+}
