@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
 	--main-color: black;
@@ -11,18 +11,17 @@
 	--darklightpurple: #6e41c9;
 	--pink: #E260D9;
 	--titlefont: "Permanent Marker";
-	--font: "Patrick Hand";
+	--font: "Sour Gummy";
 }
 
-// source: https://svgsilh.com/image/2174687.html
 html {
 	background-color: var(--main-color);
 	background-image: url('img/splatters.svg') !important;
 }
 
 body {
-	
-	font-family:var(--font);
+
+	font-family: var(--font);
 }
 
 .intro {
@@ -35,29 +34,26 @@ body {
 p {
 	font-size: 1.2em;
 	color: var(--text-color);
-}
 
-a {
-	font-size: 0.85em;
-	color: var(--text-color);
-	color: var(--secondary-color);
+	a {
+		font-size: 1.1em;
+		text-decoration: underline;
+		color: var(--darklightpurple)
+	}
 }
 
 h2 {
 	font-weight: 800;
-	color: var(--secondary-color);
+	color: var(--darklightpurple);
 	font-family: var(--titlefont);
 	text-align: center;
-}
-
-h3 {
-	font-weight: 600;
-	color: var(--secondary-color);
-	font-size: 1.1em;
+	margin-top: 10px;
+	margin-bottom: 12px;
 }
 
 h5 {
 	font-family: var(--titlefont);
+	font-size: 1.1em;
 }
 
 .foto {
@@ -68,7 +64,7 @@ h5 {
 .page-footer {
 	margin-top: 50px;
 	margin-bottom: 0;
-	background-color: var(--secondary-color);
+	background-color: var(--darklightpurple);
 }
 
 .collection-item {
@@ -83,14 +79,46 @@ h5 {
 	height: 20px;
 }
 
-// https://codepen.io/enbee81/pen/ExKJWzW
+// FAQ
+.collapsible-body {
+	padding-top: 4px;
+}
+
+
+// HOME PAGE
+
+.highlighted_pink {
+	margin-top: 8px;
+	// background-color: var(--pink);
+	font-family: var(--titlefont);
+	font-weight: bolder;
+	text-align: center;
+	margin-left: 40px;
+	margin-right: 40px;
+}
+
+.social-icon {
+	color: black;
+	/* Dark Grey (Materialize grey darken-2) */
+	transition: color 0.3s ease;
+	/* Smooth fade effect */
+}
+
+/* Hover State */
+.social-icon:hover {
+	// color: white; /* Change to Black on hover */
+	filter: drop-shadow(4px 4px 10px var(--pink));
+	background-color: transparent;
+	/* Optional: Removes the gray box background */
+}
+
 .paper {
 	max-width: 950px;
 	padding-bottom: 32px;
 	//   height: 200px;
 	margin: 2em auto;
 	background: #fff;
-	box-shadow: 4px 4px 0 purple;
+	box-shadow: 4px 4px 0 var(--light-purple);
 	background-image:
 		linear-gradient(90deg,
 			#fff 12px, 0,
@@ -132,7 +160,7 @@ h5 {
 		background-color: rgb(0, 0, 0, 0);
 	}
 
-	
+
 
 	ul li a {
 		display: block;
@@ -146,71 +174,74 @@ h5 {
 		text-decoration-thickness: 3px;
 	}
 
-	ul li a .signupbtn {
-			background-color: var(--lightpurple) !important;
-		}
-
 	ul li {
 		float: left;
-		
+
 	}
 
 	ul li a:hover {
-		background-color: var(--purple);
+		background-color: var(--darklightpurple);
+		color: white;
+	}
+
+	.signupbtn {
+		background-color: var(--darklightpurple) !important;
 		color: white;
 	}
 }
 
 .sticker {
-  width: 60%;
-//   height: 200px;
-  padding: 16px;
-  border: 1px solid #ddd;
-  background-size: cover;
-	background-clip: content-box;
-  background-color: var(--darklightpurple);
-  box-sizing: border-box;
-  position: relative;
-  margin: auto;
-  top: 30px; 
-  
-  color: white;
-  text-indent: 20px;
-
-.sticker_texts {
+	width: 60%;
+	//   height: 200px;
 	padding: 16px;
-	#sticker_smalltext {
-		margin-left: -16px;
-		background-color: var(--pink);
+	border: 1px solid #ddd;
+	background-size: cover;
+	background-clip: content-box;
+	background-color: black; //var(--darklightpurple);
+	box-sizing: border-box;
+	position: relative;
+	margin: auto;
+	top: 30px;
+
+	color: white;
+	text-indent: 20px;
+
+	.sticker_texts {
+		padding: 16px;
+
+		#sticker_smalltext {
+			margin-left: -16px;
+			background-color: var(--pink);
+		}
+
+		#sticker_bigtext {
+			font-size: 52px;
+			font-family: var(--titlefont);
+		}
 	}
-	#sticker_bigtext {
-		font-size: 52px;
-		font-family: var(--titlefont);
-	}
-}
-  
+
 }
 
 .sticker:after {
-  content: "";
-  display: block;
-  position: absolute;
-  border: 50px solid transparent;
-  border-bottom: 50px solid #fefefe;
-  bottom: -60px;
-  right: -65px;
-  box-shadow: 0px 7px 6px -9px black;
-  transform: rotate(135deg);
+	content: "";
+	display: block;
+	position: absolute;
+	border: 50px solid transparent;
+	border-bottom: 50px solid #fefefe;
+	bottom: -60px;
+	right: -65px;
+	box-shadow: 0px 7px 6px -9px black;
+	transform: rotate(135deg);
 }
 
 .sticker:before {
-  content: "";
-  display: block;
-  position: absolute;
-  border: 50px solid transparent;
-  border-top: 50px solid #fefefe;
-  top: -60px;
-  left: -65px;
-  box-shadow: 0px -7px 6px -9px black;
-  transform: rotate(135deg);
+	content: "";
+	display: block;
+	position: absolute;
+	border: 50px solid transparent;
+	border-top: 50px solid #fefefe;
+	top: -60px;
+	left: -65px;
+	box-shadow: 0px -7px 6px -9px black;
+	transform: rotate(135deg);
 }
