@@ -1,0 +1,117 @@
+
+document.addEventListener('DOMContentLoaded', function() {
+  var elems = document.querySelectorAll('.collapsible');
+  // Initializing with 'accordion: false' lets multiple stay open at once
+  var instances = M.Collapsible.init(elems, {
+    accordion: false 
+  });
+    $("#mainbody").load("pages/home.html");
+});
+document.getElementById("navlist").innerHTML = `
+<ul class="">
+    <li><a onclick='open_Home()'>Home</a></li>
+    <li><a onclick='open_FAQ()'>FAQ</a></li>
+    <li><a onclick='open_Tutorials()'>Tutorials</a></li>
+    <li><a target="_blank" class="signupbtn" href="https://docs.google.com/forms/d/e/1FAIpQLSfi7LfeJM7om5ewgvcLPC8v9YokE1NHcWbgqPttzR6SAzywrg/viewform">Sign up</a></li>
+</ul>
+`
+
+
+var FAQ_text = `
+<p><strong>How does the event work?</strong></p>
+<p>You can sign up via our entry form! In late December, we'll send out bingo cards to each participant with prompts guiding you towards fics in your fandom to make art for. (Ex. Make art for a fic with no comments). Throughout January, you can make as few or as many pieces of art as you like - you can aim for a bingo, a blackout, or even just pick one fic you really want to make art for. Post your work anywhere you'd normally post it, then share with the writer and the Fanart Frenzy community here or on discord, tumblr, bluesky, and AO3.</p>
+
+<p><strong>How do I sign up?</strong></p>
+<p>Right here!</p>
+
+<p><strong>What fandoms are involved?</strong></p>
+<p>Any fandom that has fic posted! Pick your favorite fandoms, find some fics that fit the prompts on your bingo card, and go nuts!</p>
+
+<p><strong>What kind of art do you allow?</strong></p>
+<p>Literally anything artistic. You can make traditional art or digital art, you can compose music or curate a playlist, you can make a gif set or memes about the fic. Everything from oil paintings to shoe box dioramas is welcome here. Feel free to comment your medium below or message us if you’re not sure, but generally speaking, if it’s something that you were inspired to make by a fic, it’s perfect for the event and we want to see it.</p>
+
+<p><strong>I like this idea, but I can’t draw.</strong></p>
+<p>See above! You don’t need to know how to draw. We’ll take any kind of art you want to create. That said, if you don’t enjoy making art, you can still participate as a commenter! Sign up via the same entry form - just tick the ‘comment prompts’ box for your bingo card, and we’ll send you a card with prompts to help you find fics in your fandom to comment on during the event period.</p>
+<p>If you don’t really want to do that, but you still want to help make the event a success, you can join us as a promoter! We’re looking for people in all fandoms to help spread the word during the sign-up period. More info on that here. Just fill out the entry form and if we have an opening in your fandom, we’ll get in touch!</p>
+<p>And if you don’t want to do that, you can still help out by sharing our posts and spreading the word!</p>
+
+<p><strong>Can I do writing/poetry/fanfic of a fanfic/etc. for this event?</strong></p>
+<p>We’re keeping our focus on making fanart for fanfic this round, so fanfic and other writing-based mediums are generally not what we’re looking for. Poetry, if it has a significant visual/audio element (written out with calligraphy, embroidered, spoken word, or something like concrete poetry) that is of equal or greater focus, is just fine! Something like blackout poetry or text-only poetry is a bit too far from visual arts for this event, as the focus is mainly on the words rather than any visual element.</p>
+
+<p><strong>Can I join the discord server/subreddit/etc if I’m participating as a commenter/promoter?</strong></p>
+<p>YES! Get in there!</p>
+
+<p><strong>Can I join the discord server/subreddit/etc if I’m an author and/or not sure about if/how I want to participate?</strong></p>
+<p>Hell yeah, dude, come on in and hang out. It’s open to everyone, even if you just want to check out the art and lurk.</p>
+
+<p><strong>What’s the deadline to sign up?</strong></p>
+<p>December 21st!</p>
+
+<p><strong>What if I miss the deadline to sign up, but I still want to participate?</strong></p>
+<p>Just sign up now, problem solved! Just kidding - if you’re still waffling and the deadline passes you by, or you didn’t hear about the event until Jan 5th, contact us and we’ll work something out.</p>
+<p>We’ll also have weekly mini challenges, so even if you’re not sold on formally participating, we’ll have some lower-commitment stuff for you to do!</p>
+
+<p><strong>When will the event be?</strong></p>
+<p>We’re holding the event in January. You’ll have your bingo cards before then, so feel free to start scoping out fics as soon as you get it. The AO3 collection will be open for posting from January 1st until January 31st, 2026.</p>
+
+<p><strong>What if I don’t finish my art before January 31st?</strong></p>
+<p>Please still finish it up and post it! While there is an official event period, we’ll still be boosting people’s works on our socials after it ends and we hope to do mini challenges in between events. It’s just a fun challenge, not a homework assignment, and there’s no penalty for being late.</p>
+
+<p><strong>What if authors think I’m a scammer?</strong></p>
+<p>Hopefully that won’t happen, but we’re taking as many precautions as we can to ensure that everyone shares their art in a clear, non-scammy way. Please check out our commenting guide before commenting with your art!</p>
+<p>You can also share your art with authors via AO3’s gifting feature if the author has the option turned on.</p>
+
+<p><strong>Where can I post my art?</strong></p>
+<p>Anywhere you’d normally post it! Please check out our Posting Guidelines for details!</p>
+
+<p><strong>What if I can’t find a fic that fits the prompt in my fandom?</strong></p>
+<p>The prompts are fairly simple (make art for a fic you’ve reread, make art for a fic with 10k or more words, etc.) so there should be something to suit each prompt, but we’ll have weekly recommendation threads in the subreddit and a fic recommendation channel in the discord server where everyone can recommend fics. It might also be an opportunity to branch out into some new fandoms! We’ll make sure you find something fun that inspires you.</p>
+
+<p><strong>Do I have to get permission from the authors before I make my art?</strong></p>
+<p>Only if you’re recording a podfic. In all other circumstances, we’re trying to avoid looking like scammers - who also promise art at some point in the nebulous future - so we ask that you only approach authors about/with your work once it’s complete and you can show it to them immediately.</p>
+
+<p><strong>What if they don’t want it/get mad at me?</strong></p>
+<p>In our experience, this is likely to be a very, very rare occurrence. Every time this question has been asked in fanfiction discussion spaces such as r/AO3 or r/fanfiction, the response from authors is almost universally that they’d lose their minds with joy at any art, no matter the form or skill level.</p>
+<p>If this does happen and an author asks you to take down your work or remove the link to their work, we’re really sorry, but please do comply with their wishes. If you need assistance with any interaction like this, contact us and we’ll do our best to help you out.</p>
+<p>But generally speaking, fanart hater georg is an outlier adn should not have been counted.</p>
+
+<p><strong>Can I participate if I don’t have a [discord, reddit, tumblr, AO3], etc.?</strong></p>
+<p>Of course! As long as you have a way to post your art and get it to the author, you can participate. Involvement on any one platform isn’t a requirement.</p>
+
+<p><strong>Can I participate if I don’t have an AO3 account?</strong></p>
+<p>Absolutely! Your fic options will be limited to those available to guests, and we won’t be able to add your work to the AO3 collection, but as long as you have a place to post your art and a way to get it to the author, you’re good to go.</p>
+
+<p><strong>Why can’t we post twitter/X links on the subreddit or discord server?</strong></p>
+<p>The official position of this event and its organizers is fuck That Guy with a cactus. You’re welcome to post your art on Twitter/X if you normally would, but if you’re sharing your art in official event spaces like the discord server or reddit, please make a new post on that platform rather than sharing a twitter link.</p>
+
+<p><strong>Can I use AI for this? Or just for part of my art?</strong></p>
+<p>No. AI is not welcome here in any form. More info on our stance here.</p>
+
+<p><strong>You didn’t answer my question here.</strong></p>
+<p>Ask us in the comments or send us a message, we’ll get back to you ASAP and if it’s a common query, we’ll add it to this post!</p>
+`
+
+function open_Tutorials() {
+    $("#mainbody").load("pages/tutorials.html");
+}
+
+function open_FAQ() {
+     var elems = document.querySelectorAll('.collapsible');
+  // Initializing with 'accordion: false' lets multiple stay open at once
+  var instances = M.Collapsible.init(elems, {
+    accordion: false 
+  });
+  $("#mainbody").load("pages/faq.html");
+   var elems = document.querySelectorAll('.collapsible');
+  // Initializing with 'accordion: false' lets multiple stay open at once
+  var instances = M.Collapsible.init(elems, {
+    accordion: false 
+  });
+}
+
+function open_Home() {
+    $("#mainbody").load("pages/home.html");
+}
+
+
+document.getElementById("footertext").innerHTML = "New Content";
