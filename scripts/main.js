@@ -12,8 +12,6 @@ document.getElementById("navlist").innerHTML = `
 </ul>
 `;
 
-
-
 function open_Tutorials() {
   $("#mainbody").load("pages/tutorials.html", function() {
     var elems = document.querySelectorAll('#mainbody .collapsible'); // Scoped selector
@@ -40,9 +38,24 @@ function open_FAQ() {
     var instances = M.Collapsible.init(elems, {
         accordion: false 
     });
+
+        // 1. Select all elements with the class 'icon'
+    const icons = document.querySelectorAll('.faqicon');
+
+    // 2. Loop through each icon
+    icons.forEach(icon => {
+    // 3. Generate a random Hue (0 - 360 degrees)
+    const randomHue = Math.floor(Math.random() * 360);
+    
+    // 4. Set the color using HSL
+    // 70% Saturation, 50% Lightness creates vibrant, readable colors
+    icon.style.color = `hsl(${randomHue}, 70%, 50%)`;
+    console.log(icon.style.color);
+    });
     
   });
 }
 
-
 document.getElementById("footertext").innerHTML = "New Content";
+
+
