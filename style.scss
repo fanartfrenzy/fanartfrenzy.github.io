@@ -235,6 +235,8 @@ h5 {
 
 	.sticker_texts {
 		padding: 16px;
+		background-image: url('img/splatters.svg');
+		background-size:cover;
 
 		#sticker_smalltext {
 			margin-left: -16px;
@@ -245,7 +247,7 @@ h5 {
 		#sticker_bigtext {
 			font-size: 52px;
 			font-family: var(--font);
-			text-shadow: 4px 4px var(--pink);
+			text-shadow: 2px 2px var(--pink);
 		}
 	}
 
