@@ -44,6 +44,8 @@ $(document).ready(function() {
             open_FAQ();
         } else if (hash == '#ai') {
             open_AIStance();
+        } else if (hash == '#quiz') {
+            open_Quiz();
         } else {
             open_Home();
         }
@@ -69,6 +71,10 @@ function open_Tutorials() {
 
 function open_Home() {
     $("#mainbody").load("pages/home.html");
+}
+
+function open_Quiz() {
+    $("#mainbody").load("pages/quiz.html");
 }
 
 function open_FAQ() {
