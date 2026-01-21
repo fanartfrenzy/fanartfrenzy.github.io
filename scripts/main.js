@@ -57,6 +57,7 @@ $(document).ready(function() {
     // Trigger the function immediately on page load
     loadPage();
 
+    $(".dropdown-trigger").dropdown();
 });
 
 
