@@ -1,7 +1,10 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     $("#mainbody").load("pages/home.html");
-    $("#navlist").load("pages/elements/nav.html");
+    $("#navlist").load("pages/elements/nav.html", function() {
+            $(".dropdown-trigger").dropdown();
+  });
+    // $("#navlist").load("pages/elements/nav.html") ;
     $("#footertext").load("pages/elements/footertext.html");
 });
 
@@ -59,7 +62,6 @@ $(document).ready(function() {
     // Trigger the function immediately on page load
     loadPage();
 
-    $(".dropdown-trigger").dropdown();
     // $('.carousel').carousel();
 });
 
@@ -84,10 +86,6 @@ function open_Quiz() {
 function open_Rewards() {
     $("#mainbody").load("pages/rewards.html", function() {
         $('.carousel').carousel();
-        // var elems = document.querySelectorAll('#mainbody .collapsible'); // Scoped selector
-        // var instances = M.Collapsible.init(elems, {
-        //     accordion: false 
-        // });
   });
 }
 
@@ -136,4 +134,8 @@ function open_Commenting() {
 
 function open_Posting() {
     $("#mainbody").load("pages/subpages_about/posting_guide.html");
+}
+
+function open_Challenges() {
+    $("#mainbody").load("pages/challenges.html");
 }
