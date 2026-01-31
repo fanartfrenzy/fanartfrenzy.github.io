@@ -24,6 +24,17 @@ body {
 	font-family: var(--font);
 }
 
+button {
+	// margin: 0 auto; 
+	font-weight: 800;
+	color: black!important;
+	background-color: var(--pink) !important;
+	font-family: var(--titlefont) !important;
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 12px;
+}
+
 .intro {
 	padding-top: 8px !important;
 	font-weight: 500;

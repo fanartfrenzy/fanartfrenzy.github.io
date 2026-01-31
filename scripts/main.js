@@ -14,6 +14,8 @@ $(document).ready(function() {
             open_Commenting(); 
         } else if (hash == '#rules') {
             open_Rules();
+        } else if (hash == '#rewards') {
+            open_Rewards();
         } else if (hash == '#posting') {
             open_Posting();
         } else if (hash == '#tumblrsection') {
@@ -58,6 +60,7 @@ $(document).ready(function() {
     loadPage();
 
     $(".dropdown-trigger").dropdown();
+    // $('.carousel').carousel();
 });
 
 
@@ -76,6 +79,16 @@ function open_Home() {
 
 function open_Quiz() {
     $("#mainbody").load("pages/quiz.html");
+}
+
+function open_Rewards() {
+    $("#mainbody").load("pages/rewards.html", function() {
+        $('.carousel').carousel();
+        // var elems = document.querySelectorAll('#mainbody .collapsible'); // Scoped selector
+        // var instances = M.Collapsible.init(elems, {
+        //     accordion: false 
+        // });
+  });
 }
 
 function open_FAQ() {
