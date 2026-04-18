@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', function() {
     $("#navlist").load("pages/elements/nav.html", function() {
             $(".dropdown-trigger").dropdown();
   });
-    // $("#navlist").load("pages/elements/nav.html") ;
     $("#footertext").load("pages/elements/footertext.html");
 });
 
@@ -51,6 +50,8 @@ $(document).ready(function() {
             open_AIStance();
         } else if (hash == '#quiz') {
             open_Quiz();
+        } else if (hash == '#mini') {
+            open_Mini();
         } else {
             open_Home();
         }
@@ -87,6 +88,10 @@ function open_Rewards() {
     $("#mainbody").load("pages/rewards.html", function() {
         $('.carousel').carousel();
   });
+}
+
+function open_Mini() {
+    $("#mainbody").load("pages/minievent.html");
 }
 
 function open_FAQ() {
