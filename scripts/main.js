@@ -20,6 +20,8 @@ $(document).ready(function() {
             open_Rewards();
         } else if (hash == '#posting') {
             open_Posting();
+        } else if (hash == '#generator') {
+            open_Generator();
         } else if (hash == '#tumblrsection') {
             open_Posting();
             $('html, body').animate({
@@ -78,6 +80,10 @@ function open_Tutorials() {
 
 function open_Home() {
     $("#mainbody").load("pages/home.html");
+}
+
+function open_Generator() {
+    $("#mainbody").load("pages/generator.html");
 }
 
 function open_Quiz() {
