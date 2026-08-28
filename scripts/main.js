@@ -83,7 +83,14 @@ function open_Home() {
 }
 
 function open_Generator() {
-    $("#mainbody").load("pages/generator.html");
+    $("#mainbody").load("pages/generator.html", function() {
+        // console.log("sldf");
+        // const canvas = document.getElementsByClassName("myCanvas");
+        // console.log(canvas);
+        // // console.log(canvas.item());
+        // console.log(canvas.namedItem('myCanvas'));
+        // console.log(canvas.length);
+    });
 }
 
 function open_Quiz() {
